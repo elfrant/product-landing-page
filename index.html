@@ -12,22 +12,24 @@
 </head>
 
 <body>
-    <header class="header">
+    <header id="header" class="header">
         <div class="header-container">
             <div class="header-container-logo">
                 <div class="header-container-logo-pic">
                 </div>
                 <h1 class="header-container-name">Plants Shop</h1>
+                <img id="header-img" src="http://localhost:3000/" alt="">
             </div>
-            <nav class="header__navigation">
+            <nav id="nav-bar" class="header__navigation">
                 <ul class="header__navigation-list">
-                    <li class="navigation__item"><a href="#">Features</a></li>
-                    <li class="navigation__item"><a href="#">How It Works</a></li>
-                    <li class="navigation__item"><a href="#">Pricing</a></li>
+                    <li class="navigation__item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="navigation__item"><a class="nav-link" href="#how-it-works">How It Works</a></li>
+                    <li class="navigation__item"><a class="nav-link" href="#pricing">Pricing</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
     <section class="header-statement">
         <div class="header-statement">
             <h2 class="header-statement-text">Make Your Home Green</h2>
@@ -35,15 +37,16 @@
                 plants that are suitable for growing exactly in your conditions.</p>
         </div>
         <div class="email-form">
-            <form action="#" method="post" class="email-form-container">
-                <input class="email-form-container-field" type="text" placeholder="Enter your email address" required
-                    name="email-address">
-                <input class="email-form-container-button button" value="GET STARTED" type="submit">
+            <form id="form" action="https://www.freecodecamp.com/email-submit" method="post"
+                class="email-form-container">
+                <input id="email" class="email-form-container-field" type="email" placeholder="Enter your email address"
+                    required name="email">
+                <input id="submit" class="email-form-container-button button" value="GET STARTED" type="submit">
             </form>
         </div>
     </section>
 
-    <section class="main__information">
+    <section id="features" class="main__information">
         <div class="main__information-info-container">
             <h2 class="main__information-title">Fill Your Home and Garden With Beautiful, Green Plants!?</h2>
             <p class="main__information-paragraph">Our shop offers you to buy home plants to decorate your home or
@@ -81,45 +84,40 @@
 
     <section id="how-it-works">
         <h3 id="how-it-works-title">Beautiful Flowers Video</h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/aS-LUW5Jim0" title="YouTube video player"
-            frameborder="0"
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/aS-LUW5Jim0"
+            title="YouTube video player" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
     </section>
 
-    <section class="price-section">
-      <!--  <div class="price-section-content"> -->
-            <div class="price-section-content-text">
-                <h3 class="price-section-content-text-title">Small plants</h3>
-                <p class="price-section-content-text-title-price">from 20$</p>
-                <p class="price-section-content-text-title-item">Money Plant Bryophyllum Philodendron</p>
-                <input class="price-section-content-text-title-button button" value="SELECT" type="submit">
-            </div>
-            <div class="price-section-content-text">
-                <h3 class="price-section-content-text-title">Big plants</h3>
-                <p class="price-section-content-text-title-price">from 25$</p>
-                <p class="price-section-content-text-title-item">Dracaena Dieffenbachia Rubber Tree</p>
-                <input class="price-section-content-text-title-button button" value="SELECT" type="submit">
-            </div>
-            <div class="price-section-content-text">
-                <h3 class="price-section-content-text-title">Succulents</h3>
-                <p class="price-section-content-text-title-price">from 30$</p>
-                <p class="price-section-content-text-title-item">Graptosedum Elephant bush Crassula Ovata</p>
-                <input class="price-section-content-text-title-button button" value="SELECT" type="submit">
-            </div>
-     <!--   </div> -->
+    <section class="price-section" id="pricing">
+        <div class="price-section-content-text">
+            <h3 class="price-section-content-text-title">Small plants</h3>
+            <p class="price-section-content-text-title-price">from 20$</p>
+            <p class="price-section-content-text-title-item">Money Plant Bryophyllum Philodendron</p>
+            <input class="price-section-content-text-title-button button" value="SELECT" type="submit">
+        </div>
+        <div class="price-section-content-text">
+            <h3 class="price-section-content-text-title">Big plants</h3>
+            <p class="price-section-content-text-title-price">from 25$</p>
+            <p class="price-section-content-text-title-item">Dracaena Dieffenbachia Rubber Tree</p>
+            <input class="price-section-content-text-title-button button" value="SELECT" type="submit">
+        </div>
+        <div class="price-section-content-text">
+            <h3 class="price-section-content-text-title">Succulents</h3>
+            <p class="price-section-content-text-title-price">from 30$</p>
+            <p class="price-section-content-text-title-item">Graptosedum Elephant bush Crassula Ovata</p>
+            <input class="price-section-content-text-title-button button" value="SELECT" type="submit">
+        </div>
     </section>
-<footer class="credentials">
-    <div class="credentials_links">
-        <a class="credentials_links-link" href="#privacy">Privacy</a>
-        <a class="credentials_links-link" href="#terms">Terms</a>
-        <a class="credentials_links-link" href="#contact">Contact</a>
-    </div>
-
-    <p class="credentials_text">Copyright 2022, Spring Plant Shop</p>
-
-
-</footer>
+    <footer class="credentials">
+        <div class="credentials_links">
+            <a class="credentials_links-link" href="#privacy">Privacy</a>
+            <a class="credentials_links-link" href="#terms">Terms</a>
+            <a class="credentials_links-link" href="#contact">Contact</a>
+        </div>
+        <p class="credentials_text">Copyright 2022, Spring Plant Shop</p>
+    </footer>
 
 </body>
 
