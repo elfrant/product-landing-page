@@ -12,15 +12,7 @@
     --background-color-header: #eeeeee;
     --card-background-color: #fff6ed;
     --main-font-color: #79a207;
-    --main-font-color-title: #ffa5c0
-}
-
-@media (min-width: 560px) {
-    .header-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        grid-gap: 20px;
-    }
+    --main-font-color-title: #ffa5c0;
 }
 
 header {
@@ -55,13 +47,24 @@ a {
 
 .header-container {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 
+
+@media (min-width: 560px) {
+    .header-container {
+        flex-direction: row;
+        
+    }
+}
+
+
+
 .header-container-logo {
     display: flex;
-    width: 60%;
+    width: 50%;
     align-items: center;
 }
 
@@ -69,23 +72,34 @@ a {
     background-image: url(../img/logo-flowers.png);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 35%;
-    height: 250px;
+    width: 35%; 
+    min-width: 120px;
+    height: 120px;
+     margin: 0 0 0 -50px;
     align-self: center;
-    justify-self: center;
+    justify-self: center; 
     background-position: 50% 50%;
+}
+
+@media (min-width: 560px) {
+    .header-container-logo-pic {
+        flex-direction: row;
+        margin: 0 0 0 10px;
+
+        
+    }
 }
 
 .header-container-name {
     color: var(--main-font-color-title);
     align-self: center;
-    font-size: 50px;
+    font-size: 40px;
     margin: 0 0 0 40px;
     font-family: var(--font-site);
 }
 
 .header__navigation {
-    width: 40%;
+
     display: flex;
     color: var(--main-font-color);
 }
@@ -159,6 +173,8 @@ a {
     padding: 20px 0px 20px 0px;
 }
 
+
+
 .main__information-paragraph {
     font-family: var(--font-site);
     color: var(--main-font-color);
@@ -216,55 +232,53 @@ a {
 }
 
 .price-section {
-    background-color: var(--background-color-header);
-}
-
-.price-section-content {
+    
     min-height: 500px;
+    min-width: 370px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 3fr));
-    grid-gap: 30px;
-    margin: 40px 0 0 0;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    grid-gap: 20px;
+    justify-items: center;
+    justify-content: space-around;
+   
+    margin: 40px 40px 40px 40px;
     font-family: var(--font-site);
     color: var(--main-font-color);
     font-size: 23px;
-    min-width: 420px;
     font-weight: 700;
-    padding: 30px 30px 30px 30px;
 }
 
 .price-section-content-text {
+    max-width: 370px;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    justify-content: space-around;
+    background-color: var(--background-color-header);
     border-style: inset;
 }
 
 .price-section-content-text-title {
-    text-align: center;
+    
     font-size: 30px;
-    padding: 20px 0px 40px 0px;
-    color: var(--main-font-color-title)
+   color: var(--main-font-color-title);
 }
 
 .price-section-content-text-title-price {
-    text-align: center;
-    font-size: 30px;
-    padding: 20px 0px 40px 0px;
+    
+    font-size: 30px;  
 }
 
 .price-section-content-text-title-item {
     text-align: center;
-    font-size: 30px;
-    padding: 20px 10px 20px 10px;
+    font-size: 30px; 
 }
 
 .price-section-content-text-title-button {
-
     height: 50px;
     width: 100px;
+    justify-self: flex-end;
     margin: 30px 30px 30px 30px;
     background-color: var(--card-background-color);
     color: var(--main-font-color-title);
@@ -272,4 +286,25 @@ a {
 
 .price-section-content-text-title-button:hover {
     background-color: var(--dark-description);
+}
+footer {
+    margin: 50px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color-header);
+    min-height: 60px;
+    align-items: flex-end;
+    justify-content: space-around;
+    font-family: var(--font-site);
+    color: var(--main-font-color);  
+}
+
+.credentials_links-link {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.credentials_text {
+    font-size: 14px;
+    margin-right: 10px;
 }
